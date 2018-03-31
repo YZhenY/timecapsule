@@ -19,7 +19,8 @@
     "express": "^4.16.3",
     "morgan": "^1.9.0",
     "react": "^16.3.0",
-    "react-dom": "^16.3.0"
+    "react-dom": "^16.3.0",
+    "semantic-ui-react": "^0.79.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
