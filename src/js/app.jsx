@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-App = {
+window.AppRoot = {
     web3Provider: null,
     contracts: {},
     initWeb3: function() {
@@ -12,7 +12,25 @@ App = {
           App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
         }
         web3 = new Web3(App.web3Provider);
-    
-        return App.initContract();
     },
 }
+
+class App extends React.Component {
+  constructor(props) {
+      super(props);      
+      this.state = {
+        web3Provider: null,
+        contracts: {},
+      }
+  }
+
+  //sticky items can be configured later
+  render () {
+      return (
+        <div>
+          <input type='text' />
+        </div>
+      )
+  }
+}
+export default App;

@@ -8,7 +8,7 @@ const app = express();
 
 app.use(morgan('dev'));
 
-app.use(express.static(__dirname + 'dist'));
+app.use(express.static(__dirname + '/../dist'));
 
 app.listen(port, function(err) {
     if (err) throw err;
