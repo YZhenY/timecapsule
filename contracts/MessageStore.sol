@@ -4,6 +4,7 @@ contract MessageStore {
 
     mapping(uint => address) public recipients;
     mapping(uint => bytes32) public postBox;
+    uint[] public msgDates;
 
     //allows storage of messages
     function storeMsg(bytes32 mail, uint date, address recipient) public returns(bool) {
@@ -11,6 +12,13 @@ contract MessageStore {
         recipients[date] = recipient;
         postBox[date] = mail;
         return true;
+    }
+
+    function getAvailableMsgDates() public view returns (uint[]) {
+        return msgDates;
+    }
+    function test() public view returns (bytes32) {
+        return "sup";
     }
 
     function getRecipient(uint date) public view returns (address) {
